@@ -4,6 +4,7 @@ from Convergent's Business Process Automation Build Team
 
 **documentation links**
 
+- [PUBLIC FOOD MODEL] https://clarifai-python.readthedocs.io/en/latest/tutorial-predict/
 - https://www.clarifai.com/developer/guide/predict
 - http://clarifai-python.readthedocs.io/en/latest/tutorial/
 
