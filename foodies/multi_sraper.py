@@ -1,14 +1,16 @@
 #temporary code
 #!/usr/bin/env python3
+
+#for scraping multiple page menus: chipotle, kerbey lane
 import requests
 
 from bs4 import BeautifulSoup
 
-restarurant_url = 'https://www.yelp.com/menu/chipotle-mexican-grill-austin-14/'
-
-restaruant_urls = [url, url, url]
+restaurant_url1 = 'https://www.yelp.com/menu/chipotle-mexican-grill-austin-14/'
+restaurant_url2 =
+restaurant_urls = [restaurant_url1, restaurant_url2]
 for url in restaurant_urls:
-    menu_sections = ["bowls", "burritos", "tacos"] # make this programatic
+    menu_sections = ["bowls", "burritos", "tacos", "salads"] # make this programatic
     
     for section in menu_sections:
         r = requests.get(url + section)
@@ -23,28 +25,15 @@ for url in restaurant_urls:
         #print(first)
         
         soup_list = soup.find_all('h4')
-        
+        a = []
         for x in soup_list:
-            print(x.get_text().strip())
+            #print(x.get_text().strip())
+            a.append(x.get_text().strip())
         
-    
-    
-    
-    
-#f= open('menuitems.csv','wb')
-#csv_writer= csv.writer(f)  
-    
-    
-    
-#import pandas as pd 
-#df = pd.DataFrame(records,columns=['menu'])
-    
-#df.to_csv('menuitems.csv', index=False, encoding= 'utf-8')
-
-#write data to csv file 
-#import csv
-#excel= csv.writer(open('menu-items.csv','w'))
-#excel.writerow(['Item', 'Link'])
-#excel.writerow([first ,links])
+        print (a)
+     
 
 
+   
+    
+    
